@@ -1,0 +1,179 @@
+@import "tailwindcss";
+
+/* Class-based dark mode (toggle) */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Theme variables: light and dark semantic tokens */
+@theme inline {
+  /* Fonts */
+  --font-heading: "Cormorant Garamond", serif;
+  --font-body: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+
+  /* Light palette (default) */
+  --color-cream: #f5f0e8;
+  --color-cream-dark: #e8dfd0;
+  --color-brown: #2c1810;
+  --color-brown-mid: #5d4e37;
+  --color-brown-light: #8b7355;
+  --color-accent: #c4a77d;
+  --color-terracotta: #a67b5b;
+
+  /* Semantic theme variables (used in custom styles and dark mode) */
+  --color-bg-primary: #f5f0e8;
+  --color-bg-secondary: #e8dfd0;
+  --color-bg-inverse: #2c1810;
+  --color-text-primary: #2c1810;
+  --color-text-secondary: #5d4e37;
+  --color-text-inverse: #f5f0e8;
+  --color-border: #e8dfd0;
+  --color-surface: #ffffff;
+}
+
+/* Dark mode overrides via theme variables (for use with theme() and custom styles) */
+.dark {
+  --color-bg-primary: #1a1512;
+  --color-bg-secondary: #252019;
+  --color-bg-inverse: #e8dfd0;
+  --color-text-primary: #f5f0e8;
+  --color-text-secondary: #c4a77d;
+  --color-text-inverse: #2c1810;
+  --color-border: #3d3329;
+  --color-surface: #252019;
+}
+
+/* Base layer: smooth scroll and defaults */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+  }
+
+  body {
+    @apply antialiased font-body transition-colors duration-200;
+    background-color: var(--color-bg-primary);
+    color: var(--color-text-primary);
+  }
+}
+
+/* Component layer: reusable UI patterns using @apply and theme() */
+
+/* Primary CTA button */
+.btn-primary {
+  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold shadow-sm transition-colors duration-200;
+  background-color: theme(colors.accent);
+  color: theme(colors.brown);
+}
+.btn-primary:hover {
+  background-color: theme(colors.terracotta);
+}
+.dark .btn-primary {
+  color: theme(colors.brown);
+}
+
+/* Secondary / outline button */
+.btn-outline {
+  @apply inline-flex items-center justify-center rounded-full border-2 px-6 py-3 text-sm font-semibold transition-colors duration-200;
+  border-color: theme(colors.accent);
+  color: theme(colors.accent);
+}
+.btn-outline:hover {
+  background-color: theme(colors.accent);
+  color: theme(colors.brown);
+}
+
+/* Product card */
+.card-product {
+  @apply flex flex-col overflow-hidden rounded-2xl border shadow-sm transition-shadow duration-200 hover:shadow-md;
+  border-color: var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.card-product .card-product__image {
+  @apply aspect-square overflow-hidden;
+  background-color: var(--color-bg-secondary);
+}
+
+.card-product .card-product__image img {
+  @apply h-full w-full object-cover transition-transform duration-300;
+}
+.card-product:hover .card-product__image img {
+  transform: scale(1.05);
+}
+
+.card-product .card-product__body {
+  @apply flex flex-1 flex-col p-5;
+}
+
+.card-product .card-product__title {
+  @apply font-heading font-semibold;
+  color: var(--color-text-primary);
+}
+
+.card-product .card-product__price {
+  @apply mt-auto pt-4 text-lg font-semibold;
+  color: var(--color-text-primary);
+}
+
+.btn-cart {
+  @apply mt-3 w-full rounded-full py-2.5 text-sm font-semibold transition-colors duration-200;
+  background-color: theme(colors.brown);
+  color: theme(colors.cream);
+}
+.btn-cart:hover {
+  background-color: theme(colors.brown-mid);
+}
+.dark .btn-cart {
+  background-color: theme(colors.cream-dark);
+  color: theme(colors.brown);
+}
+.dark .btn-cart:hover {
+  background-color: theme(colors.cream);
+}
+
+/* Section heading */
+.section-label {
+  @apply text-sm font-medium uppercase tracking-[0.2em];
+  color: theme(colors.accent);
+}
+.dark .section-label {
+  color: theme(colors.accent);
+}
+
+.section-title {
+  @apply font-heading mt-2 text-3xl font-semibold sm:text-4xl;
+  color: var(--color-text-primary);
+}
+
+.section-description {
+  @apply mx-auto mt-3 max-w-2xl;
+  color: var(--color-text-secondary);
+}
+
+/* Nav link */
+.nav-link {
+  @apply text-sm font-medium transition-colors duration-200;
+  color: var(--color-text-primary);
+}
+.nav-link:hover {
+  color: theme(colors.brown-mid);
+}
+
+/* Input that respects theme */
+.input-newsletter {
+  @apply min-w-0 flex-1 rounded-full border px-4 py-3 bg-transparent transition-colors duration-200;
+  border-color: var(--color-border);
+  color: var(--color-text-inverse);
+}
+.input-newsletter::placeholder {
+  color: theme(colors.brown-light);
+}
+.input-newsletter:focus {
+  @apply outline-none ring-1;
+  border-color: theme(colors.accent);
+  box-shadow: 0 0 0 1px theme(colors.accent);
+}
+
+/* Utility layer: optional one-off helpers */
+.text-balance {
+  text-wrap: balance;
+}

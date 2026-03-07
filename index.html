@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Tanatap Coffee – Fresh roasted coffee, pastries, and a place to slow down. Order specialty coffee online or visit us. Free shipping on orders over $50." />
+  <meta name="keywords" content="coffee, specialty coffee, fresh roasted, online coffee shop, Tanatap Coffee, single origin, espresso, café" />
+  <meta name="author" content="Tanatap Coffee" />
+  <link rel="canonical" href="https://example.com/" />
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tanatap Coffee – E-Commerce Landing Page" />
+  <meta property="og:description" content="Fresh roasted coffee, pastries, and a place to slow down. Order online or visit us on the street." />
+  <meta property="og:url" content="https://example.com/" />
+  <meta property="og:locale" content="en_US" />
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Tanatap Coffee – E-Commerce Landing Page" />
+  <meta name="twitter:description" content="Fresh roasted coffee, pastries, and a place to slow down. Order online or visit us." />
+  <title>Tanatap Coffee – E-Commerce Landing Page</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet" />
+  <link href="./css/output.css" rel="stylesheet" />
+</head>
+<body class="bg-cream text-brown dark:bg-(--color-bg-primary) dark:text-(--color-text-primary)">
+  <!-- Navigation -->
+  <header class="sticky top-0 z-50 w-full border-b border-cream-dark bg-cream/95 backdrop-blur-sm dark:border-(--color-border) dark:bg-(--color-bg-primary)/95">
+    <nav class="mx-auto flex max-w-7xl items-center justify-between gap-6 px-4 py-4 sm:px-6 lg:px-8">
+      <a href="#" class="font-heading text-xl font-semibold tracking-tight text-brown dark:text-(--color-text-primary)">Tanatap Coffee</a>
+      <ul class="hidden items-center gap-8 md:flex">
+        <li><a href="#home" class="nav-link">Home</a></li>
+        <li><a href="#menu" class="nav-link">Menu</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+      <div class="flex items-center gap-2">
+        <button type="button" id="theme-toggle" class="rounded-full p-2 text-brown hover:bg-cream-dark transition-colors dark:text-(--color-text-primary) dark:hover:bg-(--color-bg-secondary)" aria-label="Toggle dark mode">
+          <svg class="h-5 w-5 hidden dark:block" id="icon-sun" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" /></svg>
+          <svg class="h-5 w-5 dark:hidden" id="icon-moon" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z" /></svg>
+        </button>
+        <button type="button" class="rounded-full p-2 text-brown hover:bg-cream-dark transition-colors dark:text-(--color-text-primary) dark:hover:bg-(--color-bg-secondary)" aria-label="Search">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+        </button>
+        <button type="button" class="rounded-full p-2 text-brown hover:bg-cream-dark transition-colors dark:text-(--color-text-primary) dark:hover:bg-(--color-bg-secondary)" aria-label="Cart">
+          <svg class="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z" /></svg>
+        </button>
+        <button type="button" class="md:hidden rounded-lg p-2 text-brown hover:bg-cream-dark dark:text-(--color-text-primary) dark:hover:bg-(--color-bg-secondary)" aria-label="Menu">
+          <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" /></svg>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section id="home" class="relative overflow-hidden bg-brown dark:bg-(--color-bg-inverse)">
+      <div class="absolute inset-0 opacity-30">
+        <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1920&q=80" alt="" class="h-full w-full object-cover" />
+      </div>
+      <div class="relative mx-auto max-w-7xl px-4 py-20 sm:px-6 sm:py-28 lg:px-8 lg:py-36">
+        <div class="max-w-2xl">
+          <p class="section-label text-accent">Welcome to</p>
+          <h1 class="font-heading mt-2 text-4xl font-semibold tracking-tight text-white sm:text-5xl lg:text-6xl">Tanatap Coffee</h1>
+          <p class="mt-4 text-lg text-cream-dark dark:text-(--color-text-secondary)">Fresh roasted coffee, pastries, and a place to slow down. Order online or visit us on the street.</p>
+          <div class="mt-8 flex flex-wrap gap-4">
+            <a href="#menu" class="btn-primary">Shop Coffee</a>
+            <a href="#about" class="btn-outline border-white/60 text-white hover:bg-white/10 hover:text-white">Our Story</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features strip -->
+    <section class="border-b border-cream-dark bg-cream-dark/50 dark:border-(--color-border) dark:bg-(--color-bg-secondary)/50">
+      <div class="mx-auto max-w-7xl px-4 py-8 sm:px-6 lg:px-8">
+        <ul class="grid grid-cols-1 gap-8 sm:grid-cols-3 text-center">
+          <li class="flex flex-col items-center">
+            <span class="rounded-full bg-brown p-3 text-accent dark:bg-(--color-bg-inverse)">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z" /></svg>
+            </span>
+            <h3 class="font-heading mt-3 font-semibold text-brown dark:text-(--color-text-primary)">Fresh Roasted</h3>
+            <p class="mt-1 text-sm text-brown-mid dark:text-(--color-text-secondary)">Small-batch roasted weekly for the best flavor.</p>
+          </li>
+          <li class="flex flex-col items-center">
+            <span class="rounded-full bg-brown p-3 text-accent dark:bg-(--color-bg-inverse)">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+            </span>
+            <h3 class="font-heading mt-3 font-semibold text-brown dark:text-(--color-text-primary)">Fast Delivery</h3>
+            <p class="mt-1 text-sm text-brown-mid dark:text-(--color-text-secondary)">Free shipping on orders over $50.</p>
+          </li>
+          <li class="flex flex-col items-center">
+            <span class="rounded-full bg-brown p-3 text-accent dark:bg-(--color-bg-inverse)">
+              <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" /></svg>
+            </span>
+            <h3 class="font-heading mt-3 font-semibold text-brown dark:text-(--color-text-primary)">Made with Love</h3>
+            <p class="mt-1 text-sm text-brown-mid dark:text-(--color-text-secondary)">Sourced with care from local & ethical farms.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Menu / Products -->
+    <section id="menu" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="text-center">
+        <p class="section-label text-brown-light">Our Menu</p>
+        <h2 class="section-title">Fresh from the Roastery</h2>
+        <p class="section-description text-brown-mid dark:text-(--color-text-secondary)">Single-origin and blends for every taste. Order online and we’ll ship the same day.</p>
+      </div>
+      <ul class="mt-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+        <li class="card-product">
+          <div class="card-product__image">
+            <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=600&q=80" alt="House Blend" />
+          </div>
+          <div class="card-product__body">
+            <h3 class="card-product__title">House Blend</h3>
+            <p class="mt-1 text-sm text-brown-mid dark:text-(--color-text-secondary)">Smooth, balanced, medium roast.</p>
+            <p class="card-product__price">$14.00</p>
+            <button type="button" class="btn-cart">Add to Cart</button>
+          </div>
+        </li>
+        <li class="card-product">
+          <div class="card-product__image">
+            <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=600&q=80" alt="Single Origin Ethiopia" />
+          </div>
+          <div class="card-product__body">
+            <h3 class="card-product__title">Single Origin Ethiopia</h3>
+            <p class="mt-1 text-sm text-brown-mid dark:text-(--color-text-secondary)">Fruity, floral, light roast.</p>
+            <p class="card-product__price">$18.00</p>
+            <button type="button" class="btn-cart">Add to Cart</button>
+          </div>
+        </li>
+        <li class="card-product">
+          <div class="card-product__image">
+            <img src="https://images.unsplash.com/photo-1447933601403-0c6688de566e?w=600&q=80" alt="Decaf" />
+          </div>
+          <div class="card-product__body">
+            <h3 class="card-product__title">Decaf</h3>
+            <p class="mt-1 text-sm text-brown-mid dark:text-(--color-text-secondary)">Full flavor, no caffeine.</p>
+            <p class="card-product__price">$15.00</p>
+            <button type="button" class="btn-cart">Add to Cart</button>
+          </div>
+        </li>
+        <li class="card-product">
+          <div class="card-product__image">
+            <img src="https://images.unsplash.com/photo-1510707577716-0d14d2e3c2e2?w=600&q=80" alt="Espresso Blend" />
+          </div>
+          <div class="card-product__body">
+            <h3 class="card-product__title">Espresso Blend</h3>
+            <p class="mt-1 text-sm text-brown-mid dark:text-(--color-text-secondary)">Rich, bold, dark roast.</p>
+            <p class="card-product__price">$16.00</p>
+            <button type="button" class="btn-cart">Add to Cart</button>
+          </div>
+        </li>
+      </ul>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="bg-brown text-white dark:bg-(--color-bg-inverse) dark:text-(--color-text-inverse)">
+      <div class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
+        <div class="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-16 items-center">
+          <div class="relative aspect-4/3 overflow-hidden rounded-2xl">
+            <img src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?w=800&q=80" alt="Tanatap Coffee interior" class="h-full w-full object-cover" />
+          </div>
+          <div>
+            <p class="section-label text-accent">Our Story</p>
+            <h2 class="font-heading mt-2 text-3xl font-semibold sm:text-4xl">From the Street to Your Cup</h2>
+            <p class="mt-4 text-cream-dark dark:text-(--color-text-secondary)">Tanatap Coffee started as a small cart on a busy corner. Today we roast in-house and ship nationwide—but we still believe in the same thing: great coffee, no pretension.</p>
+            <p class="mt-4 text-cream-dark dark:text-(--color-text-secondary)">Every bag is roasted to order and packed with care. Visit us in person or order online; we’re here for you.</p>
+            <a href="#contact" class="btn-outline mt-6 border-accent text-accent hover:bg-accent hover:text-brown">Get in Touch</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Testimonial -->
+    <section class="bg-cream-dark/60 dark:bg-(--color-bg-secondary)/60">
+      <div class="mx-auto max-w-4xl px-4 py-16 text-center sm:px-6 lg:px-8">
+        <blockquote class="font-heading text-xl font-medium italic text-brown sm:text-2xl dark:text-(--color-text-primary) text-balance">“The best coffee I’ve ordered online. Tastes like it was just roasted.”</blockquote>
+        <p class="mt-4 text-brown-mid dark:text-(--color-text-secondary)">— Sarah M., regular customer</p>
+      </div>
+    </section>
+
+    <!-- CTA / Newsletter -->
+    <section id="contact" class="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
+      <div class="rounded-3xl bg-brown px-6 py-12 text-center sm:px-12 lg:py-16 dark:bg-(--color-bg-inverse)">
+        <h2 class="font-heading text-2xl font-semibold text-white sm:text-3xl dark:text-(--color-text-inverse)">Join the Street</h2>
+        <p class="mx-auto mt-3 max-w-xl text-cream-dark dark:text-(--color-text-secondary)">Subscribe for updates, new roasts, and 10% off your first order.</p>
+        <form class="mx-auto mt-8 flex max-w-md flex-col gap-3 sm:flex-row sm:gap-2">
+          <label for="email" class="sr-only">Email</label>
+          <input id="email" type="email" name="email" placeholder="you@example.com" required class="input-newsletter" />
+          <button type="submit" class="btn-primary">Subscribe</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-cream-dark bg-cream-dark/40 dark:border-(--color-border) dark:bg-(--color-bg-secondary)/40">
+    <div class="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 gap-8 md:grid-cols-4">
+        <div class="md:col-span-2">
+          <a href="#" class="font-heading text-xl font-semibold text-brown dark:text-(--color-text-primary)">Tanatap Coffee</a>
+          <p class="mt-2 text-sm text-brown-mid dark:text-(--color-text-secondary)">Fresh coffee, roasted with care. Order online or visit us on the street.</p>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-brown dark:text-(--color-text-primary)">Shop</h4>
+          <ul class="mt-3 space-y-2 text-sm text-brown-mid dark:text-(--color-text-secondary)">
+            <li><a href="#menu" class="hover:text-brown dark:hover:text-(--color-text-primary) transition-colors">Coffee</a></li>
+            <li><a href="#" class="hover:text-brown dark:hover:text-(--color-text-primary) transition-colors">Merchandise</a></li>
+            <li><a href="#" class="hover:text-brown dark:hover:text-(--color-text-primary) transition-colors">Gift Cards</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-sm font-semibold uppercase tracking-wider text-brown dark:text-(--color-text-primary)">Company</h4>
+          <ul class="mt-3 space-y-2 text-sm text-brown-mid dark:text-(--color-text-secondary)">
+            <li><a href="#about" class="hover:text-brown dark:hover:text-(--color-text-primary) transition-colors">About</a></li>
+            <li><a href="#contact" class="hover:text-brown dark:hover:text-(--color-text-primary) transition-colors">Contact</a></li>
+            <li><a href="#" class="hover:text-brown dark:hover:text-(--color-text-primary) transition-colors">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="mt-12 flex flex-col items-center justify-between gap-4 border-t border-cream-dark dark:border-(--color-border) pt-8 sm:flex-row">
+        <p class="text-sm text-brown-mid dark:text-(--color-text-secondary)">© Tanatap Coffee. All rights reserved.</p>
+        <div class="flex gap-6">
+          <a href="#" class="text-brown-mid hover:text-brown dark:text-(--color-text-secondary) dark:hover:text-(--color-text-primary) transition-colors" aria-label="Instagram"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+          <a href="#" class="text-brown-mid hover:text-brown dark:text-(--color-text-secondary) dark:hover:text-(--color-text-primary) transition-colors" aria-label="Twitter"><svg class="h-5 w-5" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script>
+    (function () {
+      var storageKey = 'tanatap-theme';
+      function getStored() { return localStorage.getItem(storageKey); }
+      function setStored(v) { try { localStorage.setItem(storageKey, v); } catch (e) {} }
+      function prefersDark() { return window.matchMedia('(prefers-color-scheme: dark)').matches; }
+      function init() {
+        var stored = getStored();
+        var dark = stored === 'dark' || (stored !== 'light' && prefersDark());
+        document.documentElement.classList.toggle('dark', dark);
+      }
+      init();
+      document.getElementById('theme-toggle') && document.getElementById('theme-toggle').addEventListener('click', function () {
+        var isDark = document.documentElement.classList.toggle('dark');
+        setStored(isDark ? 'dark' : 'light');
+      });
+    })();
+  </script>
+</body>
+</html>
