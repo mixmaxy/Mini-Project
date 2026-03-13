@@ -41,44 +41,15 @@
   --color-surface: #252019;
 }
 
-/* Base layer: smooth scroll and defaults */
-@layer base {
-  html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 5rem;
-  }
-
-  body {
-    @apply antialiased font-body transition-colors duration-200;
-    background-color: var(--color-bg-primary);
-    color: var(--color-text-primary);
-  }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
 }
 
-/* Component layer: reusable UI patterns using @apply and theme() */
-
-/* Primary CTA button */
-.btn-primary {
-  @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold shadow-sm transition-colors duration-200;
-  background-color: theme(colors.accent);
-  color: theme(colors.brown);
-}
-.btn-primary:hover {
-  background-color: theme(colors.terracotta);
-}
-.dark .btn-primary {
-  color: theme(colors.brown);
-}
-
-/* Secondary / outline button */
-.btn-outline {
-  @apply inline-flex items-center justify-center rounded-full border-2 px-6 py-3 text-sm font-semibold transition-colors duration-200;
-  border-color: theme(colors.accent);
-  color: theme(colors.accent);
-}
-.btn-outline:hover {
-  background-color: theme(colors.accent);
-  color: theme(colors.brown);
+body {
+  @apply antialiased font-body transition-colors duration-200;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
 }
 
 /* Product card */
@@ -114,66 +85,8 @@
   color: var(--color-text-primary);
 }
 
-.btn-cart {
-  @apply mt-3 w-full rounded-full py-2.5 text-sm font-semibold transition-colors duration-200;
-  background-color: theme(colors.brown);
-  color: theme(colors.cream);
-}
-.btn-cart:hover {
-  background-color: theme(colors.brown-mid);
-}
-.dark .btn-cart {
-  background-color: theme(colors.cream-dark);
-  color: theme(colors.brown);
-}
-.dark .btn-cart:hover {
-  background-color: theme(colors.cream);
-}
-
-/* Section heading */
-.section-label {
-  @apply text-sm font-medium uppercase tracking-[0.2em];
-  color: theme(colors.accent);
-}
-.dark .section-label {
-  color: theme(colors.accent);
-}
-
-.section-title {
-  @apply font-heading mt-2 text-3xl font-semibold sm:text-4xl;
-  color: var(--color-text-primary);
-}
-
 .section-description {
   @apply mx-auto mt-3 max-w-2xl;
   color: var(--color-text-secondary);
 }
 
-/* Nav link */
-.nav-link {
-  @apply text-sm font-medium transition-colors duration-200;
-  color: var(--color-text-primary);
-}
-.nav-link:hover {
-  color: theme(colors.brown-mid);
-}
-
-/* Input that respects theme */
-.input-newsletter {
-  @apply min-w-0 flex-1 rounded-full border px-4 py-3 bg-transparent transition-colors duration-200;
-  border-color: var(--color-border);
-  color: var(--color-text-inverse);
-}
-.input-newsletter::placeholder {
-  color: theme(colors.brown-light);
-}
-.input-newsletter:focus {
-  @apply outline-none ring-1;
-  border-color: theme(colors.accent);
-  box-shadow: 0 0 0 1px theme(colors.accent);
-}
-
-/* Utility layer: optional one-off helpers */
-.text-balance {
-  text-wrap: balance;
-}
